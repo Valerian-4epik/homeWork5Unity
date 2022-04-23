@@ -286,6 +286,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43ab95e4025bff448c661123ddd25e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &446279517 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1784174813131577064, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
+  m_PrefabInstance: {fileID: 1161687130538762720}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &446279519 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4395087276809388638, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
+  m_PrefabInstance: {fileID: 1161687130538762720}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &446279521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446279517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a8663310e2ebf84584abdd8f0778b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSource: {fileID: 446279519}
+  isInside: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,6 +563,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &752233207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2962120689396999443, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
+  m_PrefabInstance: {fileID: 1161687130538762720}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &752233211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 752233207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7aadb4239b5f94fb9dc36d0ad275e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _renderer: {fileID: 232818941}
+  _siren: {fileID: 446279517}
 --- !u!1001 &1161687130538762720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -550,13 +593,53 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 713048675312747180, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3690102810871849707, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
       propertyPath: m_Name
       value: House
       objectReference: {fileID: 0}
+    - target: {fileID: 4395087276809388638, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4395087276809388638, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: acab777db896a7c45a10219e8ce745df, type: 3}
+    - target: {fileID: 4395087276809388638, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5733662901784129493, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894885483724178566, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
+      propertyPath: m_Size.y
+      value: 8.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894885483724178566, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
+      propertyPath: m_Offset.y
+      value: 3.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894885483724178566, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168543378970496125, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.048739664
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168543378970496125, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.4768
+      objectReference: {fileID: 0}
+    - target: {fileID: 7168543378970496125, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.1444
       objectReference: {fileID: 0}
     - target: {fileID: 7371459006375765110, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
       propertyPath: m_RootOrder
