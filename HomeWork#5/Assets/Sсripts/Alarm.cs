@@ -9,6 +9,7 @@ public class Alarm : MonoBehaviour
     private float _volume = 0.1f;
     private float _incrementStep = 0.2f;
     private bool _isInside;
+    private bool _playSound = false;
 
     void Start()
     {
@@ -29,10 +30,15 @@ public class Alarm : MonoBehaviour
     {
         _isInside = door.IsInside;
 
+        if(_playSound == false && _isInside == true)
+        {
+            _audioSource.Play();
+            _playSound = true;
+        }
+
         if (_isInside == true)
         {        
-            VolumeUp();
-            _audioSource.Play();
+            VolumeUp(); 
         }
         else if (_isInside == false)
         {
