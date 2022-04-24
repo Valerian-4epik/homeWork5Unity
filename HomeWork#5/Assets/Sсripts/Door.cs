@@ -1,24 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Door : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _renderer;
-    private bool _isInside = false;
-
-    public bool IsInside => _isInside;
+    [SerializeField] private UnityEvent _entry;
+    [SerializeField] private UnityEvent _left;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.TryGetComponent<Player>(out Player player))
         {
-            _isInside = true;
+            _entry.Invoke();
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        _isInside = false;
+        _left.Invoke();
     }
 }

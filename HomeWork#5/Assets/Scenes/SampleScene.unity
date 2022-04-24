@@ -309,7 +309,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 446279519}
-  door: {fileID: 752233211}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,6 +580,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 232818941}
+  _entry:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 446279521}
+        m_TargetAssemblyTypeName: Alarm, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _left:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 446279521}
+        m_TargetAssemblyTypeName: Alarm, Assembly-CSharp
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1161687130538762720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -621,12 +650,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6894885483724178566, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
+      propertyPath: m_Size.x
+      value: 0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894885483724178566, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
       propertyPath: m_Size.y
-      value: 8.3
+      value: 17.66
       objectReference: {fileID: 0}
     - target: {fileID: 6894885483724178566, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
       propertyPath: m_Offset.y
-      value: 3.54
+      value: 7.58
       objectReference: {fileID: 0}
     - target: {fileID: 6894885483724178566, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
       propertyPath: m_IsTrigger
@@ -634,11 +667,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7168543378970496125, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.048739664
+      value: 0.02488647
       objectReference: {fileID: 0}
     - target: {fileID: 7168543378970496125, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4768
+      value: -0.4888
       objectReference: {fileID: 0}
     - target: {fileID: 7168543378970496125, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
       propertyPath: m_LocalPosition.y
