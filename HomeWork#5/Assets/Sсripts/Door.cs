@@ -5,7 +5,7 @@ using UnityEngine;
 public class Door : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _renderer;
-    private bool _isInside = true;
+    private bool _isInside = false;
     public bool IsInside => _isInside;
 
     private void OnTriggerEnter2D(Collider2D collision)
