@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 446279519}
-  isInside: 0
+  door: {fileID: 752233211}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,7 +581,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 232818941}
-  _siren: {fileID: 446279517}
 --- !u!1001 &1161687130538762720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -596,6 +595,10 @@ PrefabInstance:
     - target: {fileID: 713048675312747180, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
       propertyPath: m_SortingOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784174813131577064, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
+      propertyPath: m_Name
+      value: Siren
       objectReference: {fileID: 0}
     - target: {fileID: 3690102810871849707, guid: 51af96dfc0878a14093281a076ad73d8, type: 3}
       propertyPath: m_Name
