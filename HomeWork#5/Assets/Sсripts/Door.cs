@@ -6,19 +6,19 @@ using UnityEngine.Events;
 public class Door : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer _renderer;
-    [SerializeField] private UnityEvent _entry;
-    [SerializeField] private UnityEvent _left;
+    [SerializeField] private UnityEvent _thiefEnteredTheHouse;
+    [SerializeField] private UnityEvent _thiefLeftTheHouse ;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.TryGetComponent<Player>(out Player player))
+        if (collision.TryGetComponent<Thief>(out Thief thief))
         {
-            _entry.Invoke();
+            _thiefEnteredTheHouse.Invoke();
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        _left.Invoke();
+        _thiefLeftTheHouse .Invoke();
     }
 }

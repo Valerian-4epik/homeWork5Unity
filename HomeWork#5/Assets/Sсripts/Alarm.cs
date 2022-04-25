@@ -23,7 +23,7 @@ public class Alarm : MonoBehaviour
         {
             VolumeUp();
         }
-        else if (_isInside == false)
+        else
         {
             VolumeDown();
         }
