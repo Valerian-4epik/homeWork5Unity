@@ -19,6 +19,6 @@ public class Door : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        _thiefLeftTheHouse .Invoke();
+        _thiefLeftTheHouse.Invoke();
     }
 }
