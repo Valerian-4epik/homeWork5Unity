@@ -11,45 +11,44 @@ public class Alarm : MonoBehaviour
     private float _maxVolume = 1.0f;
     private float _minVolume = 0.0f;
 
-    private void Update()
+    private void Start()
     {
-        StartCoroutine(VolumeValue());
+        _audioSource.volume = _incrementStep;
     }
 
     public void Play()
     {
         _audioSource.Play();
         _isInside = true;
+        StartCoroutine(ChangeVolume(_maxVolume));
     }
 
     public void Stop()
     {
         _isInside = false;
+        StartCoroutine(ChangeVolume(_minVolume));
     }
 
-    private IEnumerator VolumeValue()
+    private IEnumerator ChangeVolume(float value)
     {
-
-        if (_isInside == true)
+        while (_audioSource.volume != value)
         {
-            ChangeVolume(_maxVolume);
-        }
-        else
-        {
-            ChangeVolume(_minVolume);
-
-            if(_audioSource.volume == _minVolume)
+            if (_isInside == true)
             {
-                _audioSource.Stop();
+                _audioSource.volume += _incrementStep;
             }
-        }
+            else
+            {
+                _audioSource.volume -= _incrementStep;
 
-        yield return null;
-    }
+                if (_audioSource.volume == _minVolume)
+                {
+                    _audioSource.Stop();
+                }
+            }
 
-    private void ChangeVolume(float value)
-    {
-        _audioSource.volume = Mathf.MoveTowards(_audioSource.volume, value, Time.deltaTime * _incrementStep);
+            yield return new WaitForSeconds (1.0f);
+        }        
     }
 }
  

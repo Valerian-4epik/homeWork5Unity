@@ -575,7 +575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _renderer: {fileID: 232818941}
-  _thiefEnteredTheHouse:
+  _entered:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 446279521}
@@ -590,7 +590,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  _thiefLeftTheHouse:
+  _left:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 446279521}
